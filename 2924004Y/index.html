@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en" >
+<head>
+  <meta charset="UTF-8">
+  <title>CodePen - A Pen by Runhan Yu</title>
+  <link rel="stylesheet" href="./style.css">
+
+</head>
+<body>
+<!-- partial:index.partial.html -->
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <title>Map</title>
+  
+    <link href="//unpkg.com/layui@2.9.6/dist/css/layui.css" rel="stylesheet" />
+   
+    <script src="//unpkg.com/layui@2.9.6/dist/layui.js"></script>
+    <script src="https://api.mapbox.com/mapbox-gl-js/v2.3.0/mapbox-gl.js"></script>
+    <link
+      href="https://api.mapbox.com/mapbox-gl-js/v2.3.0/mapbox-gl.css"
+      rel="stylesheet"
+    />
+  
+    <div class="title-box">The Bus Station of Perth</div>
+
+  <style>
+        body {
+            margin: 0;
+            padding: 0;
+        }
+        #map {
+            position: absolute;
+            top: 0;
+            bottom: 0;
+            width: 100%;
+        }
+        .title-box {
+            position: absolute;
+            right: 10px;
+            top: 10px;
+            background-color: #f2f2f2;
+            border: 1px solid #ccc;
+            padding: 10px 20px;
+            z-index: 1001;
+            text-align: right;
+            font-size: 20px;
+            border-radius: 5px;
+        }
+    </style>
+    
+  </head>
+  <body>
+    <div id="searchDiv">
+      <div class="layui-form" id="label_show">
+        <div>
+          BusStopTy:
+          <input
+            type="checkbox"
+            id="MKD"
+            name="busStopType"
+            title="MKD"
+            checked
+          />
+          <input
+            type="checkbox"
+            id="CUS"
+            name="busStopType"
+            title="CUS"
+            checked
+          />
+          <input
+            type="checkbox"
+            id="HAR"
+            name="busStopType"
+            title="HAR"
+            checked
+          />
+        </div>
+      </div>
+      <br />
+      CommonName:
+      <input
+        type="text"
+        class="layui-input"
+        style="width: 200px; display: inline-block"
+        id="search"
+      />
+      <button class="layui-btn" id="searchBtn">Search</button>
+    </div>
+    <ul style="z-index: 999" class="layui-nav">
+      <li class="layui-nav-item">
+        <a> <i class="layui-icon layui-icon-star"></i> My Favorite </a>
+      </li>
+      <li class="layui-nav-item">
+        <a> <i class="layui-icon layui-icon-search"></i> Search History</a>
+      </li>
+    </ul>
+    <div id="map"></div>
+  
+  </body>
+</html>
+<!-- partial -->
+  <script  src="./script.js"></script>
+
+</body>
+</html>
